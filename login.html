@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<title>login page</title>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="backgroundLogin">
+    <div class="box">
+        <h2 class="h2Login" name ="myform">STAFF</h2>
+        <form onsubmit="return validatesubmit()" name ="myform" action="score.html">
+            <label class="FL"  for= "fname">Firstname</label>
+            <input class="boxInput" type="text" name="firstname" id="fname" placeholder ="        example@kmitl.ac.th">  
+           
+            <label class="FL"  for="lname">Lastname</label>
+            <input class="boxInput" type="text" name="lastname" id="lname" placeholder="             up to you sus">
+            
+            <input class="buttonLogin" type="submit" value="submit">
+            
+        </form>
+            
+    </div>
+    <script>
+        function  validatesubmit () {
+            var firstname = document.forms['myform']['firstname'].value;
+            if (firstname == null || firstname == '') {
+                alert ('Please fill your name')
+                return false
+            }
+            if (firstname.length < 2) {
+                alert ('Please rewrite your name')
+                return false
+            }
+            var lastname = document.forms['myform']['lastname'].value;
+            if (lastname == null || lastname == '') {
+                alert ('Please fill your lastname')
+                return false
+            }
+            if (lastname.length < 2) {
+                alert ('Please rewrite your lastname')
+                return false
+            }
+        }
+    </script>
+</body>
